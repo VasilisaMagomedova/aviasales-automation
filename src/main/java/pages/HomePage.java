@@ -1,26 +1,37 @@
 package pages;
 
-import common.DateUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.*;
-import static common.Constants.*;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import static common.Constants.DEPARTURE_DATE;
 
 public class HomePage extends BasePage {
 
     @FindBy(xpath = "//input[@data-test-id='origin-input']")
-    private WebElement originInput;
+    private WebElement departureInput;
+
+    @FindBy(xpath = "//ul[@id='avia_form_origin-menu']//li")
+    private WebElement departureSuggested;
 
     @FindBy(xpath = "//input[@data-test-id='destination-input']")
     private WebElement destinationInput;
 
+    @FindBy(xpath = "//ul[@id='avia_form_destination-menu']//li")
+    private WebElement destinationSuggested;
+
     @FindBy(xpath = "//button[@data-test-id='start-date-field']")
-    private WebElement startDateField;
+    private WebElement departureDateField;
+
+    private final By departureDate = By.xpath("//div[contains(@aria-label,'" + DEPARTURE_DATE + "')]");
 
     @FindBy(xpath = "//button[@data-test-id='end-date-field']")
-    private WebElement endDateField;
+    private WebElement returnDateField;
 
-    @FindBy(xpath = "//button[@data-test-id='passengers-field']")
-    private WebElement passengersField;
+    @FindBy(xpath = "//button[@data-test-id='calendar-action-button']")
+    private WebElement noReturnDateBtn;
+
+    @FindBy(xpath = "//label[@data-test-id='checkbox']/span")
+    private WebElement openOstrovokCheckbox;
 
     @FindBy(xpath = "//button[@data-test-id='form-submit']")
     private WebElement searchTicketsBtn;
@@ -30,28 +41,35 @@ public class HomePage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void selectDepartureDate() {
-        startDateField.click();
-        // В скобках константа - количество дней вперед от текущей даты
-        String departureDate = DateUtils.getFutureDate(DAYS_TO_DEPARTURE);
-        WebElement startDate = driver.findElement(By.xpath("//div[contains(@aria-label,'" + departureDate + "')]"));
-        startDate.click();
+    public HomePage enterCitiesOfDepartureAndDestination(String origin, String destination) throws InterruptedException {
+        departureInput.click();
+        departureInput.sendKeys(origin, Keys.ENTER);
+        Thread.sleep(500);
+        departureSuggested.click();
+        destinationInput.sendKeys(destination, Keys.ENTER);
+        Thread.sleep(500);
+        destinationSuggested.click();
+        return this;
     }
 
-    public void selectArrivalDate() {
-        endDateField.click();
-        String arrivalDate = DateUtils.getFutureDate(DAYS_TO_ARRIVAL);
-        WebElement endDate = driver.findElement(By.xpath("//div[contains(@aria-label,'" + arrivalDate + "')]"));
-        endDate.click();
+    public HomePage enterDateOfDeparture() {
+        departureDateField.click();
+        driver.findElement(departureDate).click();
+        return this;
     }
 
-    public HomePage searchTickets(String originValue, String destinationValue) {
-        originInput.sendKeys(originValue);
-        destinationInput.sendKeys(destinationValue);
-        selectDepartureDate();
-        selectArrivalDate();
-        passengersField.click();
+    public HomePage selectNoReturnDate() {
+        returnDateField.click();
+        noReturnDateBtn.click();
+        return this;
+    }
 
+    public HomePage uncheckOpenOstrovok() {
+        openOstrovokCheckbox.click();
+        return this;
+    }
+
+    public HomePage searchTickets() {
         searchTicketsBtn.click();
         return this;
     }

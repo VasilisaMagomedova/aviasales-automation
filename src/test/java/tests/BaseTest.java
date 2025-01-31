@@ -5,12 +5,17 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import pages.BasePage;
+import pages.HomePage;
+import pages.SearchResultsPage;
 
 import static common.Config.*;
 
 public class BaseTest {
+
     protected WebDriver driver = CommonActions.createDriver();
-    protected BasePage basePage = new BasePage(driver);;
+    protected BasePage basePage = new BasePage(driver);
+    protected HomePage homePage = new HomePage(driver);
+    protected SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
 
     @AfterTest
     public void clearCookiesAndLocalStorage() {
