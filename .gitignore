@@ -1,6 +1,7 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
+!**/src/main/**/resources/chrome-win64
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
