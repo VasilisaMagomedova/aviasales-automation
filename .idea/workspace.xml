@@ -5,157 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ff75e54-8172-4c3d-862b-3dde8a42736b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/132.0.6834.159.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/ABOUT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/D3DCompiler_47.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/First Run" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/MEIPreload/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/MEIPreload/preloaded_data.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/PrivacySandboxAttestationsPreloaded/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/PrivacySandboxAttestationsPreloaded/privacy-sandbox-attestations.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/chrome.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/chrome.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/chrome_100_percent.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/chrome_200_percent.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/chrome_elf.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/chrome_proxy.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/chrome_pwa_launcher.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/chrome_wer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/dxcompiler.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/dxil.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/elevation_service.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-af.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-as.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-be.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-bg.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-bn.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-cs.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-cu.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-cy.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-da.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-de-1901.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-de-1996.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-de-ch-1901.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-el.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-en-gb.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-en-us.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-es.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-et.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-eu.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-fr.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-ga.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-gl.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-gu.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-hi.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-hr.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-hu.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-hy.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-it.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-ka.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-kn.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-la.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-lt.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-lv.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-ml.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-mn-cyrl.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-mr.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-mul-ethi.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-nb.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-nl.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-nn.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-or.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-pa.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-pt.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-ru.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-sk.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-sl.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-sq.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-sv.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-ta.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-te.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-tk.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-uk.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/hyph-und-ethi.hyb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/hyphen-data/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/icudtl.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/libEGL.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/libGLESv2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/af.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/am.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ar.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/bg.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/bn.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ca.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/cs.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/da.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/de.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/el.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/en-GB.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/en-US.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/es-419.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/es.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/et.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/fa.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/fi.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/fil.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/fr.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/gu.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/he.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/hi.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/hr.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/hu.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/id.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/it.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ja.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/kn.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ko.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/lt.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/lv.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ml.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/mr.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ms.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/nb.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/nl.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/pl.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/pt-BR.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/pt-PT.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ro.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ru.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/sk.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/sl.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/sr.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/sv.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/sw.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ta.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/te.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/th.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/tr.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/uk.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/ur.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/vi.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/zh-CN.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/locales/zh-TW.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/notification_helper.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/resources.pak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/resources/accessibility/reading_mode_gdocs_helper/content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/resources/accessibility/reading_mode_gdocs_helper/gdocs_script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/resources/accessibility/reading_mode_gdocs_helper_manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/setup.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/v8_context_snapshot.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/vk_swiftshader.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/vk_swiftshader_icd.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/chrome-win64/vulkan-1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/CommonActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/CommonActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/DateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/TestCases" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/TestCases" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/TestCases" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +64,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;TestNG.SearchFlightsTest.checkSearchTicketsForAdult.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.SearchFlightsTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
