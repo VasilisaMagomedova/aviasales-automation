@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ff75e54-8172-4c3d-862b-3dde8a42736b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/CommonActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/CommonActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/TestCases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/TestCases.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
