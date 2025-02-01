@@ -15,7 +15,7 @@ public class CommonActions {
         System.setProperty("webdriver.chrome.driver",
                 "src/main/resources/chromedriver-win64/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("src/main/resources/chrome-win64/chrome.exe"); // Используем Chrome for Testing
+        options.setBinary("C:\\Users\\vasya\\OneDrive\\Рабочий стол\\IT\\AQA\\chrome-win64\\chrome.exe"); // Используем Chrome for Testing
 
         WebDriver driver = new ChromeDriver(options);
 

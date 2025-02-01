@@ -13,7 +13,6 @@ public class SearchFlightsTest extends BaseTest {
     public void checkSearchTicketsForAdult() throws InterruptedException {
 
         basePage.open(AVIASALES_HOME_PAGE);
-        Thread.sleep(3000);
 
         homePage.enterCitiesOfDepartureAndDestination(testOrigin, testDestination)
                 .enterDateOfDeparture()
@@ -21,6 +20,7 @@ public class SearchFlightsTest extends BaseTest {
                 .uncheckOpenOstrovok()
                 .searchTickets();
 
+        Thread.sleep(10000); // время на капчу
         String testSearchDepartureDate = DateUtils.normalizeDate(searchResultsPage.getSearchDepartureDate());
         String testTicketDepartureDate = DateUtils.normalizeDate(searchResultsPage.getTicketDepartureDate());
 
@@ -34,4 +34,20 @@ public class SearchFlightsTest extends BaseTest {
         System.out.println("Дата отправления в билете совпадает с введенной");
 
     }
+
+    @Test(description = "Сортировка найденных билетов по цене от дешевых к дорогим",
+            dependsOnMethods = {"checkSearchTicketsForAdult"})
+    public void sortTicketsByCheapestPriceFirst() throws InterruptedException {
+
+        searchResultsPage.setAcceptCookiesBtn();
+        searchResultsPage.sortCheapestFirst();
+        Thread.sleep(1000); //ждем сортировку
+
+        assertThat(searchResultsPage.isBadgeCheapestInsideTicket()).isTrue();
+        assertThat(searchResultsPage.arePricesSortedAsc()).isTrue();
+
+        System.out.println("Билеты отсортированы по цене - от дешевых к дорогим");
+
+    }
+
 }
