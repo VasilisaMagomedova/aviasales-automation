@@ -22,16 +22,11 @@ public class SearchFlightsTest extends BaseTest {
 
         Thread.sleep(10000); // время на капчу
         String testSearchDepartureDate = DateUtils.normalizeDate(searchResultsPage.getSearchDepartureDate());
-        String testTicketDepartureDate = DateUtils.normalizeDate(searchResultsPage.getTicketDepartureDate());
+        String testTicketDepartureDate = DateUtils.normalizeDate(searchResultsPage.getTicketPreviewDepartureDate());
 
         assertThat(searchResultsPage.getDepartureCity(testOrigin)).isEqualTo(testOrigin);
-        System.out.println("Город отправления совпадает с введенным");
-
         assertThat(searchResultsPage.getDestinationCity(testDestination)).isEqualTo(testDestination);
-        System.out.println("Город прибытия совпадает с введенным");
-
         assertThat(testTicketDepartureDate).isEqualTo(testSearchDepartureDate);
-        System.out.println("Дата отправления в билете совпадает с введенной");
 
     }
 
@@ -46,7 +41,29 @@ public class SearchFlightsTest extends BaseTest {
         assertThat(searchResultsPage.isBadgeCheapestInsideTicket()).isTrue();
         assertThat(searchResultsPage.arePricesSortedAsc()).isTrue();
 
-        System.out.println("Билеты отсортированы по цене - от дешевых к дорогим");
+    }
+
+    @Test(description = "Просмотр информации о билете",
+            dependsOnMethods = {"checkSearchTicketsForAdult"})
+    public void viewTicketInformation() {
+
+        searchResultsPage.setAcceptCookiesBtn();
+        searchResultsPage.selectTicket();
+
+        assertThat(searchResultsPage.getTicketDepartureCity(testOrigin))
+                .isEqualTo(searchResultsPage.getDepartureCity(testOrigin));
+        assertThat(searchResultsPage.getTicketDestinationCity(testDestination))
+                .isEqualTo(searchResultsPage.getDestinationCity(testDestination));
+
+        assertThat(searchResultsPage.getTicketDepartureTime())
+                .isEqualTo(searchResultsPage.getTicketPreviewDepartureTime());
+        assertThat(searchResultsPage.getTicketDepartureDate())
+                .isEqualTo(searchResultsPage.getTicketPreviewDepartureDate());
+
+        assertThat(searchResultsPage.getTicketDestinationTime())
+                .isEqualTo(searchResultsPage.getTicketPreviewDestinationTime());
+        assertThat(searchResultsPage.getTicketDestinationDate())
+                .isEqualTo(searchResultsPage.getTicketPreviewDestinationDate());
 
     }
 

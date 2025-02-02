@@ -18,8 +18,20 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//div[@data-test-id='start-date-value']")
     private WebElement searchDepartureDate;
 
+    @FindBy(xpath = "//div[@data-test-id='ticket-preview']//button[@data-test-id='button']")
+    private WebElement selectTicketBtn;
+
     @FindBy(xpath = "//div[@data-test-id='origin-endpoint']/div[3]/span[@data-test-id]")
-    private WebElement ticketDepartureDate;
+    private WebElement ticketPreviewDepartureDate;
+
+    @FindBy(xpath = "//div[@data-test-id='origin-endpoint']//span[@data-test-id='text']")
+    private WebElement ticketPreviewDepartureTime;
+
+    @FindBy(xpath = "//div[@data-test-id='destination-endpoint']/div[3]/span[@data-test-id]")
+    private WebElement ticketPreviewDestinationDate;
+
+    @FindBy(xpath = "//div[@data-test-id='destination-endpoint']//span[@data-test-id='text']")
+    private WebElement ticketPreviewDestinationTime;
 
     @FindBy(xpath = "//div[@data-test-id='filter-group-sort_side_group']/div[@role='button']")
     private WebElement sortDropdown;
@@ -29,9 +41,6 @@ public class SearchResultsPage extends BasePage {
 
     @FindBy(xpath = "//button[@data-test-id='accept-cookies-button']")
     private WebElement acceptCookiesBtn;
-
-    @FindBy(xpath = "//div[@data-test-id='ticket-preview']")
-    private WebElement ticketPreview;
 
     @FindBy(xpath = "//div[@data-test-id='ticket-preview']//strong[@data-test-id='ticket-preview-badge-cheapest']")
     private WebElement ticketBadgeCheapest;
@@ -59,8 +68,20 @@ public class SearchResultsPage extends BasePage {
         return searchDepartureDate.getText();
     }
 
-    public String getTicketDepartureDate() {
-        return ticketDepartureDate.getText();
+    public String getTicketPreviewDepartureDate() {
+        return ticketPreviewDepartureDate.getText();
+    }
+
+    public String getTicketPreviewDepartureTime() {
+        return ticketPreviewDepartureTime.getText();
+    }
+
+    public String getTicketPreviewDestinationDate() {
+        return ticketPreviewDestinationDate.getText();
+    }
+
+    public String getTicketPreviewDestinationTime() {
+        return ticketPreviewDestinationTime.getText();
     }
 
     public void setAcceptCookiesBtn() {
@@ -77,21 +98,72 @@ public class SearchResultsPage extends BasePage {
     }
 
     public boolean isBadgeCheapestInsideTicket() {
-        WebElement strongElement = ticketPreview.findElement(By.xpath(".//strong"));
+        WebElement strongElement = selectTicketBtn.findElement(By.xpath(".//strong"));
         return strongElement.getText().equals(ticketBadgeCheapest.getText());
 
     }
 
     public boolean arePricesSortedAsc() {
+
         List<WebElement> ticketPrices = driver.findElements(By.xpath
                 ("//div[@data-test-id='ticket-preview']/div/div/div/div[contains(text(), '₽')]"));
 
         for (int i = 0; i < ticketPrices.size() - 1; i++) {
-            double price1 = Double.parseDouble(ticketPrices.get(i).getText().replaceAll("[^\\d.]", ""));
-            double price2 = Double.parseDouble(ticketPrices.get(i + 1).getText().replaceAll("[^\\d.]", ""));
+            int price1 = Integer.parseInt(ticketPrices.get(i).getText().replaceAll("[^\\d.]", ""));
+            int price2 = Integer.parseInt(ticketPrices.get(i + 1).getText().replaceAll("[^\\d.]", ""));
             if (price1 > price2) return false;
         }
         return true;
+    }
+
+    public void selectTicket() {
+        Actions actions = new Actions(driver);
+        actions.scrollToElement(selectTicketBtn);
+        selectTicketBtn.click();
+    }
+
+    public String getTicketDepartureCity(String departure) {
+        WebElement ticketDepartureCity = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
+                        ("//div[@data-test-id='selected-fare-card']/following-sibling::div//div[text()='"
+                                + departure + "']")));
+        return ticketDepartureCity.getText();
+    }
+
+    public String getTicketDepartureTime() {
+        WebElement ticketDepartureTime = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
+                        ("//div[@data-test-id='selected-fare-card']/following-sibling::div//div[contains(text(),':')]")));
+        return ticketDepartureTime.getText();
+    }
+
+    public String getTicketDepartureDate() {
+        WebElement ticketDepartureDate = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
+                        ("//div[@data-test-id='selected-fare-card']/following-sibling::div//div[contains(text(),':')]//following-sibling::div")));
+        return ticketDepartureDate.getText();
+    }
+
+    public String getTicketDestinationCity(String destination) {
+        WebElement ticketDestinationCity = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
+                        ("//div[@data-test-id='selected-fare-card']/following-sibling::div//div[text()='"
+                                + destination + "']")));
+        return ticketDestinationCity.getText();
+    }
+
+    public String getTicketDestinationTime() {
+        WebElement ticketDestinationTime = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
+                        ("//div[@data-test-id='selected-fare-card']/following-sibling::div/div[2]/div/div[2]/div[2]//div[contains(text(),':')]")));
+        return ticketDestinationTime.getText();
+    }
+
+    public String getTicketDestinationDate() {
+        WebElement ticketDestinationDate = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
+                        ("//div[@data-test-id='selected-fare-card']/following-sibling::div/div[2]/div/div[2]/div[2]//div[contains(text(),':')]//following-sibling::div")));
+        return ticketDestinationDate.getText();
     }
 
 }
