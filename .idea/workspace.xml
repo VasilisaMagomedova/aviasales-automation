@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ff75e54-8172-4c3d-862b-3dde8a42736b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/NegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/NegativeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/TestCases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/TestCases.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,25 @@
       <recent name="utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.NegativeTest.searchTicketsWithoutDestination">
+  <component name="RunManager" selected="TestNG.NegativeTest.searchTicketsWithWrongDestination">
+    <configuration name="NegativeTest.searchTicketsWithWrongDestination" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="aviasales-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.NegativeTest" />
+      <option name="METHOD_NAME" value="searchTicketsWithWrongDestination" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NegativeTest.searchTicketsWithoutDestination" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aviasales-automation" />
       <extension name="coverage">
@@ -100,23 +116,6 @@
       <option name="MAIN_CLASS_NAME" value="tests.NegativeTest" />
       <option name="METHOD_NAME" value="searchTicketsWithoutDestination" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchFlightsTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="aviasales-automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SearchFlightsTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -179,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.NegativeTest.searchTicketsWithWrongDestination" />
         <item itemvalue="TestNG.NegativeTest.searchTicketsWithoutDestination" />
         <item itemvalue="TestNG.SearchFlightsTest.viewTicketInformation" />
         <item itemvalue="TestNG.SearchFlightsTest.sortTicketsByCheapestPriceFirst" />
         <item itemvalue="TestNG.SearchFlightsTest.checkSearchTicketsForAdult" />
-        <item itemvalue="TestNG.SearchFlightsTest" />
       </list>
     </recent_temporary>
   </component>

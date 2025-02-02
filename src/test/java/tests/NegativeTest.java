@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static common.Constants.AVIASALES_HOME_PAGE;
 import static utils.TestValues.testOrigin;
+import static utils.TestValues.testWrongDestination;
 
 public class NegativeTest extends BaseTest {
 
@@ -18,6 +19,16 @@ public class NegativeTest extends BaseTest {
                 .searchTickets();
 
         assertThat(homePage.showPromptEnterDestination()).isTrue();
+
+    }
+
+    @Test(description = "Поиск билетов с несуществующим пунктом назначения")
+    public void searchTicketsWithWrongDestination() throws InterruptedException {
+
+        basePage.open(AVIASALES_HOME_PAGE);
+        homePage.enterWrongDestinationCity(testWrongDestination);
+
+        assertThat(homePage.showPromptNothingFound()).isTrue();
 
     }
 

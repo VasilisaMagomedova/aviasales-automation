@@ -62,6 +62,11 @@ public class HomePage extends BasePage {
         return this;
     }
 
+    public HomePage enterWrongDestinationCity(String wrongDestination) {
+        destinationInput.sendKeys(wrongDestination, Keys.ENTER);
+        return this;
+    }
+
     public HomePage enterDateOfDeparture() {
         departureDateField.click();
         driver.findElement(departureDate).click();
@@ -89,6 +94,13 @@ public class HomePage extends BasePage {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
                         ("//div[@data-test-id='destination-autocomplete']/div[@data-test-id='text']")));
         return promptEnterDestination.isDisplayed();
+    }
+
+    public boolean showPromptNothingFound() {
+        WebElement promptNothingFound = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
+                        ("//div[contains(text(), 'Ничего не')]")));
+        return promptNothingFound.isDisplayed();
     }
 
 }
