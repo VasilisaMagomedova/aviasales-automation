@@ -2,6 +2,7 @@ package tests;
 import common.DateUtils;
 import io.qameta.allure.Step;
 import org.testng.annotations.Test;
+import utils.RetryAnalyzer;
 
 import static common.Constants.AVIASALES_HOME_PAGE;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -10,7 +11,7 @@ import static utils.TestValues.testOrigin;
 
 public class SearchFlightsTest extends BaseTest {
 
-    @Test(description = "Поиск билетов между городами для 1 взрослого")
+    @Test(description = "Поиск билетов между городами для 1 взрослого", retryAnalyzer = RetryAnalyzer.class)
     public void checkSearchTicketsForAdultTest() throws InterruptedException {
         openAviasalesStep();
         enterDepartureCityStep();
@@ -19,9 +20,7 @@ public class SearchFlightsTest extends BaseTest {
         selectNoReturnDateStep();
         uncheckOpenOstrovokStep();
         searchTicketsStep();
-        checkEqualityDepartureCityOnPreviewStep();
-        checkEqualityDestinationCityOnPreviewStep();
-        checkEqualityDepartureDateOnPreviewStep();
+        checkEqualityInformationOnPreview();
     }
 
     @Step("Открыть главную страницу Aviasales")
@@ -60,18 +59,25 @@ public class SearchFlightsTest extends BaseTest {
         Thread.sleep(10000); // время на прохождение капчи и отработки поиска
     }
 
-    @Step("Проверить совпадение введенного города отправления с городом отправления на превью билета")
-    public void checkEqualityDepartureCityOnPreviewStep() {
+    @Step("Проверить совпадение введенной информации с информацией на превью билета:")
+    public void checkEqualityInformationOnPreview() {
+        checkEqualityDepartureCityOnPreviewSubStep();
+        checkEqualityDestinationCityOnPreviewSubStep();
+        checkEqualityDepartureDateOnPreviewSubStep();
+    }
+
+    @Step("- города отправления")
+    public void checkEqualityDepartureCityOnPreviewSubStep() {
         assertThat(searchResultsPage.getDepartureCity(testOrigin)).isEqualTo(testOrigin);
     }
 
-    @Step("Проверить совпадение введенного города прибытия с городом прибытия на превью билета")
-    public void checkEqualityDestinationCityOnPreviewStep() {
+    @Step("- города прибытия")
+    public void checkEqualityDestinationCityOnPreviewSubStep() {
         assertThat(searchResultsPage.getDestinationCity(testDestination)).isEqualTo(testDestination);
     }
 
-    @Step("Проверить совпадение введенной даты отправления с датой отправления на превью билета")
-    public void checkEqualityDepartureDateOnPreviewStep() {
+    @Step("- даты отправления")
+    public void checkEqualityDepartureDateOnPreviewSubStep() {
         String testSearchDepartureDate = DateUtils.normalizeDate(searchResultsPage.getSearchDepartureDate());
         String testTicketDepartureDate = DateUtils.normalizeDate(searchResultsPage.getTicketPreviewDepartureDate());
         assertThat(testTicketDepartureDate).isEqualTo(testSearchDepartureDate);
@@ -80,7 +86,7 @@ public class SearchFlightsTest extends BaseTest {
 
 
     @Test(description = "Сортировка найденных билетов по цене от дешевых к дорогим",
-            dependsOnMethods = {"checkSearchTicketsForAdultTest"}, alwaysRun = true)
+            dependsOnMethods = {"checkSearchTicketsForAdultTest"}, retryAnalyzer = RetryAnalyzer.class)
     public void sortTicketsByCheapestPriceFirstTest() throws InterruptedException {
         setAcceptCookiesBtnStep();
         sortCheapestFirstStep();
@@ -112,7 +118,7 @@ public class SearchFlightsTest extends BaseTest {
 
 
     @Test(description = "Просмотр информации о билете",
-            dependsOnMethods = {"checkSearchTicketsForAdultTest"}, alwaysRun = true)
+            dependsOnMethods = {"checkSearchTicketsForAdultTest"}, retryAnalyzer = RetryAnalyzer.class)
     public void viewTicketInformationTest() {
         setAcceptCookiesBtnStep();
         selectTicketStep();

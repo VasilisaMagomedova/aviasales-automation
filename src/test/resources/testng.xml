@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="UI-tests Aviasales" parallel="tests" thread-count="5">
+    <suite name="UI-tests Aviasales">
+<!--    parallel="tests" thread-count="5"-->
 
     <test name="Поиск билетов между городами для 1 взрослого">
         <classes>

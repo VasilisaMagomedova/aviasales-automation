@@ -26,9 +26,10 @@ public class BaseTest {
         }
     }
 
-    @AfterSuite(alwaysRun = true)
+    @AfterTest(alwaysRun = true)
     public void close() {
         if (!HOLD_BROWSER_OPEN) {
+            driver.close();
             driver.quit();
         }
     }

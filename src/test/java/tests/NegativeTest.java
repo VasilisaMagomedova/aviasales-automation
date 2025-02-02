@@ -2,13 +2,15 @@ package tests;
 
 import io.qameta.allure.Step;
 import org.testng.annotations.Test;
+import utils.RetryAnalyzer;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static common.Constants.AVIASALES_HOME_PAGE;
 import static utils.TestValues.testWrongDestination;
 
 public class NegativeTest extends BaseTest {
 
-    @Test(description = "Поиск билетов без пункта назначения")
+    @Test(description = "Поиск билетов без пункта назначения", retryAnalyzer = RetryAnalyzer.class)
     public void searchTicketsWithoutDestinationTest() {
         openAviasalesStep();
         selectDepartureDateStep();
@@ -38,7 +40,7 @@ public class NegativeTest extends BaseTest {
 
 
 
-    @Test(description = "Поиск билетов с несуществующим пунктом назначения")
+    @Test(description = "Поиск билетов с несуществующим пунктом назначения", retryAnalyzer = RetryAnalyzer.class)
     public void searchTicketsWithWrongDestinationTest() {
         openAviasalesStep();
         enterWrongDestinationCityStep();
