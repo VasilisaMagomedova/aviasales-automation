@@ -3,7 +3,13 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
 import static common.Constants.DEPARTURE_DATE;
+import static common.Constants.IMPLICIT_WAIT;
 
 public class HomePage extends BasePage {
 
@@ -41,11 +47,15 @@ public class HomePage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public HomePage enterCitiesOfDepartureAndDestination(String origin, String destination) throws InterruptedException {
+    public HomePage enterDepartureCity(String origin) throws InterruptedException {
         departureInput.click();
         departureInput.sendKeys(origin, Keys.ENTER);
         Thread.sleep(500);
         departureSuggested.click();
+        return this;
+    }
+
+    public HomePage enterDestinationCity(String destination) throws InterruptedException {
         destinationInput.sendKeys(destination, Keys.ENTER);
         Thread.sleep(500);
         destinationSuggested.click();
@@ -72,6 +82,13 @@ public class HomePage extends BasePage {
     public HomePage searchTickets() {
         searchTicketsBtn.click();
         return this;
+    }
+
+    public boolean showPromptEnterDestination() {
+        WebElement promptEnterDestination = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath
+                        ("//div[@data-test-id='destination-autocomplete']/div[@data-test-id='text']")));
+        return promptEnterDestination.isDisplayed();
     }
 
 }

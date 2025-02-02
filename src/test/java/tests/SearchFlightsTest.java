@@ -14,7 +14,8 @@ public class SearchFlightsTest extends BaseTest {
 
         basePage.open(AVIASALES_HOME_PAGE);
 
-        homePage.enterCitiesOfDepartureAndDestination(testOrigin, testDestination)
+        homePage.enterDepartureCity(testOrigin)
+                .enterDestinationCity(testDestination)
                 .enterDateOfDeparture()
                 .selectNoReturnDate()
                 .uncheckOpenOstrovok()

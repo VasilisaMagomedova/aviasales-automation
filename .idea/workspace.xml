@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9ff75e54-8172-4c3d-862b-3dde8a42736b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/NegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/NegativeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/TestCases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/TestCases.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,20 +64,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.SearchFlightsTest.checkSearchTicketsForAdult.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SearchFlightsTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SearchFlightsTest.sortTicketsByCheapestPriceFirst.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SearchFlightsTest.viewTicketInformation.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.NegativeTest.searchTicketsWithoutDestination.executor": "Run",
+    "TestNG.SearchFlightsTest.checkSearchTicketsForAdult.executor": "Run",
+    "TestNG.SearchFlightsTest.executor": "Run",
+    "TestNG.SearchFlightsTest.sortTicketsByCheapestPriceFirst.executor": "Run",
+    "TestNG.SearchFlightsTest.viewTicketInformation.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vasya\OneDrive\Рабочий стол\IT\AQA\aviasales-automation\src\test\java\utils" />
@@ -86,7 +87,25 @@
       <recent name="utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchFlightsTest.viewTicketInformation">
+  <component name="RunManager" selected="TestNG.NegativeTest.searchTicketsWithoutDestination">
+    <configuration name="NegativeTest.searchTicketsWithoutDestination" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="aviasales-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.NegativeTest" />
+      <option name="METHOD_NAME" value="searchTicketsWithoutDestination" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SearchFlightsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aviasales-automation" />
       <extension name="coverage">
@@ -160,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.NegativeTest.searchTicketsWithoutDestination" />
         <item itemvalue="TestNG.SearchFlightsTest.viewTicketInformation" />
         <item itemvalue="TestNG.SearchFlightsTest.sortTicketsByCheapestPriceFirst" />
         <item itemvalue="TestNG.SearchFlightsTest.checkSearchTicketsForAdult" />
