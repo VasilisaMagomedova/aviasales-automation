@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI-tests Aviasales" parallel="tests" thread-count="5">
+
+    <test name="Поиск билетов между городами для 1 взрослого">
+        <classes>
+            <class name="tests.SearchFlightsTest">
+                <methods>
+                    <include name="checkSearchTicketsForAdultTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Сортировка найденных билетов по цене от дешевых к дорогим">
+        <classes>
+            <class name="tests.SearchFlightsTest">
+                <methods>
+                    <include name="checkSearchTicketsForAdultTest"/>
+                    <include name="sortTicketsByCheapestPriceFirstTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Просмотр информации о билете">
+        <classes>
+            <class name="tests.SearchFlightsTest">
+                <methods>
+                    <include name="checkSearchTicketsForAdultTest"/>
+                    <include name="viewTicketInformationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Поиск билетов без пункта назначения">
+        <classes>
+            <class name="tests.NegativeTest">
+                <methods>
+                    <include name="searchTicketsWithoutDestinationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Поиск билетов с несуществующим пунктом назначения">
+        <classes>
+            <class name="tests.NegativeTest">
+                <methods>
+                    <include name="searchTicketsWithWrongDestinationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

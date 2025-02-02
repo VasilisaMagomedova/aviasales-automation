@@ -18,6 +18,9 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//div[@data-test-id='start-date-value']")
     private WebElement searchDepartureDate;
 
+    @FindBy(xpath = "//div[@data-test-id='ticket-preview']")
+    private WebElement ticketPreview;
+
     @FindBy(xpath = "//div[@data-test-id='ticket-preview']//button[@data-test-id='button']")
     private WebElement selectTicketBtn;
 
@@ -42,7 +45,7 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//button[@data-test-id='accept-cookies-button']")
     private WebElement acceptCookiesBtn;
 
-    @FindBy(xpath = "//div[@data-test-id='ticket-preview']//strong[@data-test-id='ticket-preview-badge-cheapest']")
+    @FindBy(xpath = "//div[@data-test-id='ticket-preview']/div/strong[@data-test-id='ticket-preview-badge-cheapest']")
     private WebElement ticketBadgeCheapest;
 
     public SearchResultsPage(WebDriver driver) {
@@ -98,7 +101,7 @@ public class SearchResultsPage extends BasePage {
     }
 
     public boolean isBadgeCheapestInsideTicket() {
-        WebElement strongElement = selectTicketBtn.findElement(By.xpath(".//strong"));
+        WebElement strongElement = ticketPreview.findElement(By.xpath(".//strong"));
         return strongElement.getText().equals(ticketBadgeCheapest.getText());
 
     }

@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ff75e54-8172-4c3d-862b-3dde8a42736b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/TestCases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/TestCases.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/NegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/NegativeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchFlightsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +69,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Maven.aviasales-automation [clean,validate...].executor": "Run",
+    "Maven.aviasales-automation [io.qameta.allure:allure-maven:2.10.0:serve].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.NegativeTest.searchTicketsWithWrongDestination.executor": "Run",
     "TestNG.NegativeTest.searchTicketsWithoutDestination.executor": "Run",
+    "TestNG.NegativeTest.searchTicketsWithoutDestinationTest.executor": "Run",
     "TestNG.SearchFlightsTest.checkSearchTicketsForAdult.executor": "Run",
+    "TestNG.SearchFlightsTest.checkSearchTicketsForAdultTest.executor": "Run",
     "TestNG.SearchFlightsTest.executor": "Run",
     "TestNG.SearchFlightsTest.sortTicketsByCheapestPriceFirst.executor": "Run",
+    "TestNG.SearchFlightsTest.sortTicketsByCheapestPriceFirstTest.executor": "Run",
     "TestNG.SearchFlightsTest.viewTicketInformation.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -79,14 +91,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vasya\OneDrive\Рабочий стол\IT\AQA\aviasales-automation\src\test\resources" />
       <recent name="C:\Users\vasya\OneDrive\Рабочий стол\IT\AQA\aviasales-automation\src\test\java\utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.NegativeTest.searchTicketsWithWrongDestination">
-    <configuration name="NegativeTest.searchTicketsWithWrongDestination" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SearchFlightsTest.checkSearchTicketsForAdultTest">
+    <configuration name="NegativeTest.searchTicketsWithWrongDestinationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aviasales-automation" />
       <extension name="coverage">
         <pattern>
@@ -96,7 +109,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.NegativeTest" />
-      <option name="METHOD_NAME" value="searchTicketsWithWrongDestination" />
+      <option name="METHOD_NAME" value="searchTicketsWithWrongDestinationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -104,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NegativeTest.searchTicketsWithoutDestination" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="NegativeTest.searchTicketsWithoutDestinationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aviasales-automation" />
       <extension name="coverage">
         <pattern>
@@ -114,7 +127,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.NegativeTest" />
-      <option name="METHOD_NAME" value="searchTicketsWithoutDestination" />
+      <option name="METHOD_NAME" value="searchTicketsWithoutDestinationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -122,7 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchFlightsTest.checkSearchTicketsForAdult" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchFlightsTest.checkSearchTicketsForAdultTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aviasales-automation" />
       <extension name="coverage">
         <pattern>
@@ -132,7 +145,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.SearchFlightsTest" />
-      <option name="METHOD_NAME" value="checkSearchTicketsForAdult" />
+      <option name="METHOD_NAME" value="checkSearchTicketsForAdultTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -140,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchFlightsTest.sortTicketsByCheapestPriceFirst" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchFlightsTest.sortTicketsByCheapestPriceFirstTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aviasales-automation" />
       <extension name="coverage">
         <pattern>
@@ -150,7 +163,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.SearchFlightsTest" />
-      <option name="METHOD_NAME" value="sortTicketsByCheapestPriceFirst" />
+      <option name="METHOD_NAME" value="sortTicketsByCheapestPriceFirstTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -158,7 +171,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchFlightsTest.viewTicketInformation" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchFlightsTest.viewTicketInformationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="aviasales-automation" />
       <extension name="coverage">
         <pattern>
@@ -168,7 +181,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.SearchFlightsTest" />
-      <option name="METHOD_NAME" value="viewTicketInformation" />
+      <option name="METHOD_NAME" value="viewTicketInformationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -178,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.NegativeTest.searchTicketsWithWrongDestination" />
-        <item itemvalue="TestNG.NegativeTest.searchTicketsWithoutDestination" />
-        <item itemvalue="TestNG.SearchFlightsTest.viewTicketInformation" />
-        <item itemvalue="TestNG.SearchFlightsTest.sortTicketsByCheapestPriceFirst" />
-        <item itemvalue="TestNG.SearchFlightsTest.checkSearchTicketsForAdult" />
+        <item itemvalue="TestNG.SearchFlightsTest.checkSearchTicketsForAdultTest" />
+        <item itemvalue="TestNG.NegativeTest.searchTicketsWithoutDestinationTest" />
+        <item itemvalue="TestNG.SearchFlightsTest.sortTicketsByCheapestPriceFirstTest" />
+        <item itemvalue="TestNG.NegativeTest.searchTicketsWithWrongDestinationTest" />
+        <item itemvalue="TestNG.SearchFlightsTest.viewTicketInformationTest" />
       </list>
     </recent_temporary>
   </component>

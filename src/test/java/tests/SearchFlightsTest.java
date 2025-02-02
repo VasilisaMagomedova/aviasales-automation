@@ -1,5 +1,6 @@
 package tests;
 import common.DateUtils;
+import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 
 import static common.Constants.AVIASALES_HOME_PAGE;
@@ -10,62 +11,168 @@ import static utils.TestValues.testOrigin;
 public class SearchFlightsTest extends BaseTest {
 
     @Test(description = "Поиск билетов между городами для 1 взрослого")
-    public void checkSearchTicketsForAdult() throws InterruptedException {
+    public void checkSearchTicketsForAdultTest() throws InterruptedException {
+        openAviasalesStep();
+        enterDepartureCityStep();
+        enterDestinationCityStep();
+        selectDepartureDateStep();
+        selectNoReturnDateStep();
+        uncheckOpenOstrovokStep();
+        searchTicketsStep();
+        checkEqualityDepartureCityOnPreviewStep();
+        checkEqualityDestinationCityOnPreviewStep();
+        checkEqualityDepartureDateOnPreviewStep();
+    }
 
+    @Step("Открыть главную страницу Aviasales")
+    public void openAviasalesStep() {
         basePage.open(AVIASALES_HOME_PAGE);
+    }
 
-        homePage.enterDepartureCity(testOrigin)
-                .enterDestinationCity(testDestination)
-                .enterDateOfDeparture()
-                .selectNoReturnDate()
-                .uncheckOpenOstrovok()
-                .searchTickets();
+    @Step("Ввести город отправления в поле 'Откуда'")
+    public void enterDepartureCityStep() throws InterruptedException {
+        homePage.enterDepartureCity(testOrigin);
+    }
 
-        Thread.sleep(10000); // время на капчу
+    @Step("Ввести город назначения в поле 'Куда'")
+    public void enterDestinationCityStep() throws InterruptedException {
+        homePage.enterDestinationCity(testDestination);
+    }
+
+    @Step("Выбрать дату вылета в будущем")
+    public void selectDepartureDateStep() {
+        homePage.enterDateOfDeparture();
+    }
+
+    @Step("Выбрать 'Обратный билет не нужен' в дропдауне 'Обратно'")
+    public void selectNoReturnDateStep() {
+        homePage.selectNoReturnDate();
+    }
+
+    @Step("Снять чекбокс с 'Открыть Ostrovok.ru в новой вкладке'")
+    public void uncheckOpenOstrovokStep() {
+        homePage.uncheckOpenOstrovok();
+    }
+
+    @Step("Нажать на кнопку 'Найти билеты'")
+    public void searchTicketsStep() throws InterruptedException {
+        homePage.searchTickets();
+        Thread.sleep(10000); // время на прохождение капчи и отработки поиска
+    }
+
+    @Step("Проверить совпадение введенного города отправления с городом отправления на превью билета")
+    public void checkEqualityDepartureCityOnPreviewStep() {
+        assertThat(searchResultsPage.getDepartureCity(testOrigin)).isEqualTo(testOrigin);
+    }
+
+    @Step("Проверить совпадение введенного города прибытия с городом прибытия на превью билета")
+    public void checkEqualityDestinationCityOnPreviewStep() {
+        assertThat(searchResultsPage.getDestinationCity(testDestination)).isEqualTo(testDestination);
+    }
+
+    @Step("Проверить совпадение введенной даты отправления с датой отправления на превью билета")
+    public void checkEqualityDepartureDateOnPreviewStep() {
         String testSearchDepartureDate = DateUtils.normalizeDate(searchResultsPage.getSearchDepartureDate());
         String testTicketDepartureDate = DateUtils.normalizeDate(searchResultsPage.getTicketPreviewDepartureDate());
-
-        assertThat(searchResultsPage.getDepartureCity(testOrigin)).isEqualTo(testOrigin);
-        assertThat(searchResultsPage.getDestinationCity(testDestination)).isEqualTo(testDestination);
         assertThat(testTicketDepartureDate).isEqualTo(testSearchDepartureDate);
-
     }
+
+
 
     @Test(description = "Сортировка найденных билетов по цене от дешевых к дорогим",
-            dependsOnMethods = {"checkSearchTicketsForAdult"})
-    public void sortTicketsByCheapestPriceFirst() throws InterruptedException {
-
-        searchResultsPage.setAcceptCookiesBtn();
-        searchResultsPage.sortCheapestFirst();
-        Thread.sleep(1000); //ждем сортировку
-
-        assertThat(searchResultsPage.isBadgeCheapestInsideTicket()).isTrue();
-        assertThat(searchResultsPage.arePricesSortedAsc()).isTrue();
-
+            dependsOnMethods = {"checkSearchTicketsForAdultTest"}, alwaysRun = true)
+    public void sortTicketsByCheapestPriceFirstTest() throws InterruptedException {
+        setAcceptCookiesBtnStep();
+        sortCheapestFirstStep();
+        checkBadgeCheapestDisplayedStep();
+        checkPricesAreSortedAscStep();
     }
 
-    @Test(description = "Просмотр информации о билете",
-            dependsOnMethods = {"checkSearchTicketsForAdult"})
-    public void viewTicketInformation() {
-
+    @Step("Принять куки Aviasales")
+    public void setAcceptCookiesBtnStep() {
         searchResultsPage.setAcceptCookiesBtn();
-        searchResultsPage.selectTicket();
+    }
 
+    @Step("Нажать на дропдаун 'Сортировка' и выбрать 'Сначала дешевые'")
+    public void sortCheapestFirstStep() throws InterruptedException {
+        searchResultsPage.sortCheapestFirst();
+        Thread.sleep(2000); //ждем сортировку
+    }
+
+    @Step("Проверить наличие над превью первого билета плашки 'Самый дешевый'")
+    public void checkBadgeCheapestDisplayedStep() {
+        assertThat(searchResultsPage.isBadgeCheapestInsideTicket()).isTrue();
+    }
+
+    @Step("Проверить сортировку цен на превью билетов по возрастанию")
+    public void checkPricesAreSortedAscStep() {
+        assertThat(searchResultsPage.arePricesSortedAsc()).isTrue();
+    }
+
+
+
+    @Test(description = "Просмотр информации о билете",
+            dependsOnMethods = {"checkSearchTicketsForAdultTest"}, alwaysRun = true)
+    public void viewTicketInformationTest() {
+        setAcceptCookiesBtnStep();
+        selectTicketStep();
+        checkEqualityDepartureInformationStep();
+        checkEqualityDestinationInformationStep();
+    }
+
+    @Step("Нажать на превью первого билета")
+    public void selectTicketStep() {
+        searchResultsPage.selectTicket();
+    }
+
+    @Step("Проверить совпадение информации об отправлении на превью билета с информацией об отправлении на странице билета:")
+    public void checkEqualityDepartureInformationStep() {
+        checkEqualityDepartureCitySubStep();
+        checkEqualityDepartureTimeSubStep();
+        checkEqualityDepartureDateSubStep();
+    }
+
+    @Step("- города отправления")
+    public void checkEqualityDepartureCitySubStep() {
         assertThat(searchResultsPage.getTicketDepartureCity(testOrigin))
                 .isEqualTo(searchResultsPage.getDepartureCity(testOrigin));
-        assertThat(searchResultsPage.getTicketDestinationCity(testDestination))
-                .isEqualTo(searchResultsPage.getDestinationCity(testDestination));
+    }
 
+    @Step("- времени отправления")
+    public void checkEqualityDepartureTimeSubStep() {
         assertThat(searchResultsPage.getTicketDepartureTime())
                 .isEqualTo(searchResultsPage.getTicketPreviewDepartureTime());
+    }
+
+    @Step("- даты отправления")
+    public void checkEqualityDepartureDateSubStep() {
         assertThat(searchResultsPage.getTicketDepartureDate())
                 .isEqualTo(searchResultsPage.getTicketPreviewDepartureDate());
+    }
 
+    @Step("Проверить совпадение информации о прибытии на превью билета с информацией о прибытии на странице билета:")
+    public void checkEqualityDestinationInformationStep() {
+        checkEqualityDestinationCitySubStep();
+        checkEqualityDestinationTimeSubStep();
+        checkEqualityDestinationDateStep();
+    }
+
+    @Step("- города прибытия")
+    public void checkEqualityDestinationCitySubStep() {
+        assertThat(searchResultsPage.getTicketDestinationCity(testDestination))
+                .isEqualTo(searchResultsPage.getDestinationCity(testDestination));
+    }
+
+    @Step("- времени прибытия")
+    public void checkEqualityDestinationTimeSubStep() {
         assertThat(searchResultsPage.getTicketDestinationTime())
                 .isEqualTo(searchResultsPage.getTicketPreviewDestinationTime());
+    }
+
+    @Step("- даты прибытия")
+    public void checkEqualityDestinationDateStep() {
         assertThat(searchResultsPage.getTicketDestinationDate())
                 .isEqualTo(searchResultsPage.getTicketPreviewDestinationDate());
-
     }
 
 }
